@@ -1,11 +1,11 @@
 import React from 'react'
+import Header from './components/Header'
 import { AppWrapper } from './App.styles'
+
 
 const App = () => (
   <AppWrapper>
-    <header>
-      <h1>Countries App</h1>
-    </header>
+    <Header />
   </AppWrapper>
 )
 
