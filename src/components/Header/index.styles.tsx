@@ -4,20 +4,12 @@ import { colors } from '../shared/constants'
 const { white } = colors
 
 export const HeaderWrapper = styled.div`
-  background-color: ${white};
-  box-shadow: 0 6px 9px -7px #cecece;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-`
-
-export const HeaderContent = styled.div`
-  display: flex;
   align-items: center;
+  background-color: ${white};
+  box-shadow: 0px 0px 8px 0px rgba(133,133,133,0.2);
+  display: flex;
   justify-content: space-between;
-
-  max-width: 1440px;
-  padding: 20px 42px;
+  padding: 20px 54px;
   width: 100%;
 `
 

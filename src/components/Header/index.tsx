@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { HeaderContent, HeaderWrapper, ToggleMode } from './index.styles'
+import { HeaderWrapper, ToggleMode } from './index.styles'
 
 const Header = () => {
   const localDarkMode = localStorage.getItem('DARK_MODE') === 'true'
@@ -15,14 +15,12 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <HeaderContent>
-        <h3>Where in the world?</h3>
+      <h3>Where in the world?</h3>
 
-        <ToggleMode onClick={toggleMode}>
-          <i className={`far ${modeIcon}`}></i>
-          <span>{ modeText }</span>
-        </ToggleMode>
-      </HeaderContent>
+      <ToggleMode onClick={toggleMode}>
+        <i className={`far ${modeIcon}`}></i>
+        <span>{ modeText }</span>
+      </ToggleMode>
     </HeaderWrapper>
   )
 }
