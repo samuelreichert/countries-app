@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../shared/constants'
 
-const { white } = colors
+const { white, ligthModeBlue } = colors
 
 interface FlagProps {
   flag: string
@@ -9,6 +9,7 @@ interface FlagProps {
 
 
 export const Content = styled.div`
+  color: ${ligthModeBlue};
   padding: 18px 18px 30px;
 `
 
