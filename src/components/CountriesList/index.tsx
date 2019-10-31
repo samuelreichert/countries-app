@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import formatNumber from '../shared/formatNumber'
 import { Content, Flag, Link, Text, Title, Wrapper } from './index.styles'
+
+import { getAllCountries } from '../../api/countries'
 
 interface Country {
   name: string
@@ -41,15 +44,28 @@ const CountriesList = () => {
     }
   ]
 
-  const [countries] = useState(countriesList)
+  const [countries, setCountries] = useState(countriesList)
+
+  const getCountries = async () => {
+    const allCountries = await getAllCountries()
+    setCountries(allCountries)
+  }
+
+  const openDetailedCountry = (country: string) => {
+    console.log(country)
+  }
+
+  useEffect(() => {
+    getCountries()
+  }, [])
 
   const renderCountry = (country: Country, i: number) => {
     return (
-      <Link key={i}>
+      <Link key={i} onClick={() => openDetailedCountry(country.name)}>
         <Flag flag={country.flag} />
         <Content>
           <Title>{country.name}</Title>
-          <Text><b>Population: </b>{country.population}</Text>
+          <Text><b>Population: </b>{formatNumber(country.population)}</Text>
           <Text><b>Region: </b>{country.region}</Text>
           <Text><b>Capital: </b>{country.capital}</Text>
         </Content>
