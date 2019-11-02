@@ -13,46 +13,11 @@ interface Country {
 }
 
 const CountriesList = () => {
-  const countriesList: Country[] = [
-    {
-      "name": "Germany",
-      "capital": "Berlin",
-      "region": "Europe",
-      "population": 81770900,
-      "flag": "https://restcountries.eu/data/deu.svg",
-    },
-    {
-      "name": "United States of America",
-      "capital": "Washington, D.C.",
-      "region": "Americas",
-      "population": 323947000,
-      "flag": "https://restcountries.eu/data/usa.svg",
-    },
-    {
-      "name": "Brazil",
-      "capital": "Brasília",
-      "region": "Americas",
-      "population": 206135893,
-      "flag": "https://restcountries.eu/data/bra.svg",
-    },
-    {
-      "name": "Iceland",
-      "capital": "Reykjavík",
-      "region": "Europe",
-      "population": 334300,
-      "flag": "https://restcountries.eu/data/isl.svg",
-    }
-  ]
-
-  const [countries, setCountries] = useState(countriesList)
+  const [countries, setCountries] = useState([])
 
   const getCountries = async () => {
     const allCountries = await getAllCountries()
     setCountries(allCountries)
-  }
-
-  const openDetailedCountry = (country: string) => {
-    console.log(country)
   }
 
   useEffect(() => {
@@ -61,7 +26,7 @@ const CountriesList = () => {
 
   const renderCountry = (country: Country, i: number) => {
     return (
-      <Link key={i} onClick={() => openDetailedCountry(country.name)}>
+      <Link key={i} to={`/country/${country.name}`}>
         <Flag flag={country.flag} />
         <Content>
           <Title>{country.name}</Title>

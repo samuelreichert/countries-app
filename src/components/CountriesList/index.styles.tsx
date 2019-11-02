@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { colors } from '../shared/constants'
+import { Link as ReactLink } from 'react-router-dom'
 
 const { white, ligthModeBlue } = colors
 
 interface FlagProps {
   flag: string
 }
-
 
 export const Content = styled.div`
   color: ${ligthModeBlue};
@@ -22,7 +22,7 @@ export const Flag = styled.div`
   width: 100%;
 `
 
-export const Link = styled.a`
+export const Link = styled(ReactLink)`
   background-color: ${white};
   border-radius: 6px;
   box-shadow: 0px 0px 8px 0px rgba(133,133,133,0.2);
@@ -31,6 +31,7 @@ export const Link = styled.a`
   margin-bottom: 52px;
   overflow: hidden;
   position: relative;
+  text-decoration: none;
   width: 210px;
 `
 
