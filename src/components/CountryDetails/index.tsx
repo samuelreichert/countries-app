@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getCountryDetails } from '../../api/countries'
+import { Button } from './index.styles'
 
 const CountryDetails = (props: any) => {
-  console.log(props)
   const { history: { goBack }, match: { params: { name } } } : { history: any, match: any } = props
   const [country, setCountry] = useState({})
 
