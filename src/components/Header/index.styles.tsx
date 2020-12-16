@@ -10,15 +10,32 @@ export const HeaderWrapper = styled.div`
   color: ${ligthModeBlue};
   display: flex;
   justify-content: space-between;
-  padding: 20px 54px;
+  padding: 34px 16px;
   width: 100%;
+
+  @media(min-width: 1440px) {
+    padding: 20px 54px;
+  }
+`
+
+export const Title = styled.h3`
+  font-size: 15px;
+
+  @media(min-width: 1440px) {
+    font-size: inherit;
+  }
 `
 
 export const ToggleMode = styled.div`
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
+
+  @media(min-width: 1440px) {
+    font-size: 14px;
+  }
 
   i {
-    margin-right: 8px;
+    margin-right: 10px;
   }
 `

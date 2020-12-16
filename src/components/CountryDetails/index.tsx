@@ -17,10 +17,12 @@ const CountryDetails = (props: any) => {
 
   return (
     <div>
-      {/* setinha */}
-      <Button onClick={goBack}>Back</Button>
+      <Button onClick={goBack}>
+        <i className="fas fa-arrow-left" />
+        Back
+      </Button>
 
-      <ContentWrapper>
+      {/* <ContentWrapper>
         <Flag></Flag>
 
         <CountryContent>
@@ -44,7 +46,7 @@ const CountryDetails = (props: any) => {
             <Button small></Button>
           </BorderCountries>
         </CountryContent>
-      </ContentWrapper>
+      </ContentWrapper> */}
       Hello world
     </div>
   )
