@@ -1,0 +1,6 @@
+.header { background: var(--surface); box-shadow: var(--shadow); }
+.header__content { display: flex; align-items: center; justify-content: space-between; max-width: 1440px; min-height: 80px; padding: 0 5.5%; margin: auto; }
+.header h1 { margin: 0; font-size: 24px; font-weight: 800; }
+.theme-toggle { display: inline-flex; gap: 9px; align-items: center; color: var(--text); background: transparent; cursor: pointer; font-size: 16px; font-weight: 600; }
+.theme-toggle span { font-size: 19px; }
+@media (max-width: 640px) { .header__content { min-height: 80px; padding: 0 16px; } .header h1 { font-size: 14px; } .theme-toggle { font-size: 12px; } .theme-toggle span { font-size: 16px; } }
