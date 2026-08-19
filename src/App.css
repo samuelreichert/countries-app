@@ -1,0 +1,13 @@
+.app { --surface: #fff; --background: #fafafa; --text: #111517; --muted: #858585; --shadow: 0 2px 9px rgb(0 0 0 / 5.6%); min-height: 100vh; color: var(--text); background: var(--background); transition: background-color 160ms ease, color 160ms ease; }
+.app--dark { --surface: #2b3945; --background: #202c37; --text: #fff; --muted: #fff; --shadow: 0 2px 9px rgb(0 0 0 / 14%); }
+.app__main { max-width: 1440px; margin: auto; padding: 48px 5.5% 56px; }
+.filters { display: flex; align-items: center; justify-content: space-between; gap: 36px; margin-bottom: 48px; }
+.search-field, .region-field select { background: var(--surface); box-shadow: var(--shadow); border-radius: 5px; }
+.search-field { display: flex; align-items: center; gap: 22px; width: min(100%, 480px); height: 56px; padding: 0 30px; color: var(--muted); }
+.search-field span { font-size: 26px; line-height: 1; transform: rotate(-20deg); }
+.search-field input { width: 100%; border: 0; outline: 0; color: var(--text); background: transparent; font-size: 14px; }
+.search-field input::placeholder { color: var(--muted); opacity: .82; }
+.region-field select { width: 200px; height: 56px; padding: 0 19px; border: 0; color: var(--text); outline: 0; background-color: var(--surface); cursor: pointer; font-size: 14px; }
+.status-message { padding: 32px 0; font-weight: 600; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+@media (max-width: 640px) { .app__main { padding: 24px 16px 48px; } .filters { align-items: stretch; flex-direction: column; gap: 40px; margin-bottom: 32px; } .search-field { width: 100%; } .region-field select { width: 200px; } }

@@ -1,46 +1,17 @@
-<div align="center">
-  <h1>🌐 Countries App with Theme Switcher</h1>
-</div>
+# Countries app
 
-<div align="center">
-  Website made using Rest Countries API, React, and Typescript<br />
-</div>
+A clean React + TypeScript app for browsing REST Countries data.
 
-<div align="center">
-  from Frontend Mentor Challenges
-</div>
+## Run it
 
-### Tech Stack
-* React
-* TypeScript
-* Styled Components
+```sh
+bun install
+cp .env.example .env.local
+bun run dev
+```
 
-### Setup
+Set `VITE_REST_COUNTRIES_API_KEY` in `.env.local` to the browser-scoped API key from [REST Countries](https://restcountries.com/sign-up), then start the app. The REST Countries v5 API replaced the unauthenticated legacy endpoint in 2026.
 
-#### `yarn start`
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+For a production build, run `bun run build`.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-#### `yarn test`
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-#### `yarn run build`
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### Features
-* See all countries from the API on the homepage
-* Search for a country using an input field
-* Filter countries by region
-* Click on a country to see more detailed information on a separate page
-* Click through to the border countries on the detail page
-* Toggle the color scheme between light and dark mode
+The app supports country search, regional filtering, light/dark mode, and a country detail view with border countries. Component styles live alongside their components; global CSS is limited to resets and app-level layout.
